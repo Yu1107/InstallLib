@@ -49,8 +49,10 @@ sudo apt update -y
 echo "[Install ros-desktop-full version of Noetic"
 sudo apt install -y ros-$name_ros_version-desktop-full
 
-echo "[Install RQT & Gazebo]"
-sudo apt install -y ros-$name_ros_version-rqt-* ros-$name_ros_version-gazebo-*
+echo "[Install RQT]"
+sudo apt install -y ros-$name_ros_version-rqt-* ros-$name_ros_version-tf2-sensor-msgs ros-$name_ros_version-geodesy  ros-$name_ros_version-map-server ros-$name_ros_version-serial ros-$name_ros_version-nmea-msgs ros-$name_ros_version-rosbridge-server
+
+sudo apt-get install ros-$name_ros_version-pcl-ros ros-$name_ros_version-libg2o ros-$name_ros_version-tf2-web-republisher
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
